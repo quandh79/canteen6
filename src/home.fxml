@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: peachpuff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <Button fx:id="addProducts" layoutX="49.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleAddProduct" prefHeight="40.0" prefWidth="79.0" style="-fx-background-color: aliceblue;" text="Thêm">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <ComboBox fx:id="cboSelectNameProduct" layoutX="48.0" layoutY="143.0" onAction="#choose" prefHeight="39.0" prefWidth="290.0" promptText="Sản phẩm" style="-fx-background-color: aliceblue;" />
+        <TextField fx:id="txtQuantity" layoutX="49.0" layoutY="196.0" prefHeight="39.0" prefWidth="114.0" promptText="Số lượng" style="-fx-background-color: aliceblue;">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Button fx:id="addBill" layoutX="828.0" layoutY="590.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="51.0" prefWidth="114.0" style="-fx-background-color: aliceblue;" text="Thanh toán" />
+        <Button fx:id="del" layoutX="49.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="79.0" style="-fx-background-color: aliceblue;" text="Xóa">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="handleHistory" layoutX="962.0" layoutY="590.0" mnemonicParsing="false" onAction="#handleChangeHistory" prefHeight="51.0" prefWidth="114.0" style="-fx-background-color: aliceblue;" text="Hóa đơn">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tbvAddProduct" layoutX="48.0" layoutY="357.0" prefHeight="284.0" prefWidth="763.0" style="-fx-background-color: moccasin;">
+            <columns>
+                <TableColumn fx:id="tdId" prefWidth="75.0" text="Stt" />
+                <TableColumn fx:id="tdName" prefWidth="194.0" text="Tên sản phẩm" />
+                <TableColumn fx:id="tdQuantity" prefWidth="138.0" text="Số lượng" />
+                <TableColumn fx:id="tdPrice" prefWidth="171.0" text="Giá" />
+                <TableColumn fx:id="tdSubTotal" prefWidth="182.0" text="Thành tiền" />
+            </columns>
+        </TableView>
+        <Text layoutX="829.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền :">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="txTotal" layoutX="962.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="640.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="114.0" />
+        <Text fx:id="txVailidate" fill="red" layoutX="596.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the quantity !!!" visible="false" wrappingWidth="173.6708984375">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+      <Text fill="#b24343" layoutX="431.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lí mua hàng">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Text>
+    </children>
+</Pane>

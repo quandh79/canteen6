@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="billList" prefHeight="712.0" prefWidth="1114.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billsHistory.BillsHistoryController">
+    <children>
+        <TableView fx:id="tbvBill" layoutX="228.0" layoutY="200.0" prefHeight="302.0" prefWidth="548.0">
+            <columns>
+                <TableColumn fx:id="tdId" prefWidth="74.0" text="ID" />
+                <TableColumn fx:id="tdDate" prefWidth="276.0" text="Ngày lập" />
+                <TableColumn fx:id="tdTotal" prefWidth="195.0" text="Tổng tiền" />
+            </columns>
+        </TableView>
+        <Button layoutX="686.0" layoutY="152.0" mnemonicParsing="false" onAction="#goToNewBill" prefHeight="38.0" prefWidth="90.0" text="Thêm mới" />
+      <Text fill="#973939" layoutX="294.0" layoutY="65.0" onMouseClicked="#goToBill" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách hóa đơn">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
