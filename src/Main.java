@@ -15,8 +15,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         rootStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
-        primaryStage.setTitle("POS Market");
+        Parent root = FXMLLoader.load(getClass().getResource("home/homec.fxml"));
+        primaryStage.setTitle("CanteenManager");
         primaryStage.setScene(new DefaultScene(root));
         primaryStage.show();
 

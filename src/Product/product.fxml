@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Product.ProductController">
+    <children>
+        <TableView fx:id="tbProduct" layoutX="26.0" layoutY="90.0" prefHeight="248.0" prefWidth="565.0">
+            <columns>
+                <TableColumn fx:id="tdId" prefWidth="75.0" text="Stt" />
+                <TableColumn fx:id="tdName" prefWidth="218.0" text="Tên sản phẩm" />
+                <TableColumn fx:id="tdPrice" prefWidth="117.0" text="Giá " />
+
+            </columns>
+        </TableView>
+        <Button onAction="#goToBill" layoutX="527.0" layoutY="53.0" mnemonicParsing="false"  text="Click Buy" />
+    </children>
+</AnchorPane>

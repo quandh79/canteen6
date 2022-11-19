@@ -195,7 +195,7 @@ public class Controller implements Initializable {
             allProduct = tbvAddProduct.getItems();
             proSelected = tbvAddProduct.getSelectionModel().getSelectedItems();
             proSelected.forEach(allProduct::remove);
-
+            txTotal.setText(String.valueOf(finalCost()));
         }catch (Exception e){System.out.println("e.getMessage()");}
     }
 }
