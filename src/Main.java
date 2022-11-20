@@ -2,6 +2,7 @@ import helper.DefaultScene;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import static helper.RootStage.rootStage;
@@ -17,7 +18,7 @@ public class Main extends Application {
         rootStage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("home/homec.fxml"));
         primaryStage.setTitle("CanteenManager");
-        primaryStage.setScene(new DefaultScene(root));
+        primaryStage.setScene(new Scene(root,800,600));
         primaryStage.show();
 
     }

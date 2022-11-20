@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Product.ProductController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Product.ProductController">
     <children>
-        <TableView fx:id="tbProduct" layoutX="26.0" layoutY="90.0" prefHeight="248.0" prefWidth="565.0">
+        <TableView fx:id="tbProduct" layoutX="118.0" layoutY="202.0" prefHeight="248.0" prefWidth="565.0">
             <columns>
-                <TableColumn fx:id="tdId" prefWidth="75.0" text="Stt" />
-                <TableColumn fx:id="tdName" prefWidth="218.0" text="Tên sản phẩm" />
-                <TableColumn fx:id="tdPrice" prefWidth="117.0" text="Giá " />
+                <TableColumn fx:id="tdId" prefWidth="139.0" text="Stt" />
+                <TableColumn fx:id="tdName" prefWidth="238.0" text="Tên sản phẩm" />
+                <TableColumn fx:id="tdPrice" prefWidth="187.0" text="Giá " />
 
             </columns>
         </TableView>
-        <Button onAction="#goToBill" layoutX="527.0" layoutY="53.0" mnemonicParsing="false"  text="Click Buy" />
+        <Button layoutX="603.0" layoutY="151.0" mnemonicParsing="false" onAction="#goToBill" text="Click Buy" />
+      <Text fill="#c93232" layoutX="277.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Button layoutX="31.0" layoutY="27.0" mnemonicParsing="false" text="&lt;&lt;Back" />
     </children>
 </AnchorPane>

@@ -37,9 +37,9 @@ public class BillsHistoryController implements Initializable {
     private final BillsRepository billsRepository = new BillsRepository();
 
     public void goToNewBill(ActionEvent actionEvent) throws IOException {
-        Parent p = FXMLLoader.load(getClass().getResource("../home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../home.fxml"));
         rootStage.setTitle("New Bill");
-        rootStage.setScene(new DefaultScene(p));
+        rootStage.setScene(new Scene(root,800,600));
     }
 
    /* public void handleSearch(ActionEvent actionEvent) {
@@ -64,7 +64,7 @@ public class BillsHistoryController implements Initializable {
         if (mouseEvent.getClickCount()>=2){
             Parent root=FXMLLoader.load(getClass().getResource("../billDetails/billDetails.fxml"));
             rootStage.setTitle("cthd");
-            rootStage.setScene(new Scene(root,1200,600));
+            rootStage.setScene(new Scene(root,800,600));
         }
     }
 }

@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -27,9 +28,9 @@ public class ProductController implements Initializable {
     public TableColumn tdPrice;
 
     public void goToBill(ActionEvent actionEvent) throws IOException {
-        Parent history = FXMLLoader.load(getClass().getResource("../home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../home.fxml"));
         rootStage.setTitle("Hóa đơn");
-        rootStage.setScene(new DefaultScene(history));
+        rootStage.setScene(new Scene(root,800,600));
     }
 
     @Override

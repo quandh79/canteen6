@@ -8,9 +8,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 
-<Pane fx:controller="home.HomeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.HomeController">
    <children>
-      <Button  alignment="CENTER_RIGHT" layoutX="332.0" layoutY="149.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="192.0" text="Hóa đơn" textAlignment="JUSTIFY">
+      <Button alignment="CENTER_RIGHT" layoutX="467.0" layoutY="157.0" mnemonicParsing="false" onAction="#goToBill" prefHeight="88.0" prefWidth="192.0" text="Hóa đơn" textAlignment="JUSTIFY">
          <graphic>
             <ImageView fitHeight="88.0" fitWidth="70.0" layoutX="105.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,7 +22,7 @@
             <Font size="21.0" />
          </font>
       </Button>
-      <Button onAction="#goToProduct" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="149.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="199.0" text="Sản phẩm" textAlignment="CENTER">
+      <Button alignment="CENTER_RIGHT" layoutX="179.0" layoutY="157.0" mnemonicParsing="false" onAction="#goToProduct" prefHeight="88.0" prefWidth="199.0" text="Sản phẩm" textAlignment="CENTER">
          <graphic>
             <ImageView fitHeight="88.0" fitWidth="70.0" layoutX="105.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -39,7 +39,7 @@
             <Font size="35.0" />
          </font>
       </Text>
-      <Text fill="#1fa649" layoutX="175.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lí bán hàng">
+      <Text fill="#1fa649" layoutX="278.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lí bán hàng" textAlignment="CENTER">
          <font>
             <Font size="33.0" />
          </font>
