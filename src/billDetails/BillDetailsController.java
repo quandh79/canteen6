@@ -27,16 +27,13 @@ public class BillDetailsController implements Initializable {
     public Text txDate;
     public TableView tbvBillProduct;
     public TableColumn tdName;
-    public TableColumn tdUnit;
     public TableColumn tdQuantity;
     public TableColumn tdPrice;
     public TableColumn tdSubTotal;
     public Text txTotal;
     public AnchorPane apBillDetails;
-    public Text txMartketName;
     public Button btNewBill;
     public Button btHistory;
-    public Text txAddress;
 
     public static Bill bill;
     private final ObservableList<Products> pr = FXCollections.observableArrayList();

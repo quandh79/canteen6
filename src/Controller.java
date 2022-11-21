@@ -165,7 +165,7 @@ public class Controller implements Initializable {
             if (res) {
                 Parent listBook = FXMLLoader.load(getClass().getResource("billDetails/billDetails.fxml"));
                 rootStage.setTitle("History");
-                rootStage.setScene(new Scene(listBook, 1280, 800));
+                rootStage.setScene(new Scene(listBook, 800, 600));
             }
         }catch (Exception err){}
 

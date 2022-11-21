@@ -1,5 +1,6 @@
 package entities;
 
+import helper.DefaultScene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -31,13 +32,13 @@ public class Bill {
         this.id = id;
         this.datetime = datetime;
         this.total = total;
-        this.view = new Button("View Detail");
+        this.view = new Button("view");
         this.view.setOnAction(event -> {
             try{
                 bill=this;
                 Parent listBook = FXMLLoader.load(getClass().getResource("../billDetails/billDetails.fxml"));
                 rootStage.setTitle("History");
-                rootStage.setScene(new Scene(listBook, 1280, 800));
+                rootStage.setScene(new Scene(listBook,800,600));
             }catch (Exception e){}
         });
 
