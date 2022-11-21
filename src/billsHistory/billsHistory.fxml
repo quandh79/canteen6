@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane fx:id="billList" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: Mistyrose;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billsHistory.BillsHistoryController">
+<AnchorPane fx:id="billList" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: peachpuff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billsHistory.BillsHistoryController">
     <children>
-        <TableView fx:id="tbvBill" layoutX="126.0" layoutY="209.0"  prefHeight="302.0" prefWidth="548.0" style="-fx-background-color: lavenderblush;">
+        <TableView fx:id="tbvBill" layoutX="126.0" layoutY="209.0" prefHeight="302.0" prefWidth="548.0" style="-fx-background-color: moccasin;">
             <columns>
                 <TableColumn fx:id="tdId" prefWidth="74.0" text="ID" />
                 <TableColumn fx:id="tdDate" prefWidth="195.0" text="Ngày lập" />
@@ -19,11 +19,11 @@
             </columns>
         </TableView>
         <Button layoutX="584.0" layoutY="152.0" mnemonicParsing="false" onAction="#goToNewBill" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: honeydew;" text="Thêm mới" />
-      <Text fill="#973939" layoutX="199.0" layoutY="85.0"  strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách hóa đơn">
+      <Text fill="#1fa649" layoutX="199.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách hóa đơn">
          <font>
             <Font size="47.0" />
          </font>
       </Text>
-      <Button layoutX="47.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: honeydew;" text="&lt;&lt;Back" />
+      <Button onAction="#goHome" layoutX="47.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: honeydew;" text="&lt;&lt;Back" />
     </children>
 </AnchorPane>

@@ -7,9 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Product.ProductController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: peachpuff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Product.ProductController">
     <children>
-        <TableView fx:id="tbProduct" layoutX="118.0" layoutY="202.0" prefHeight="248.0" prefWidth="565.0">
+        <TableView fx:id="tbProduct" layoutX="118.0" layoutY="202.0" prefHeight="248.0" prefWidth="565.0" style="-fx-background-color: moccasin;">
             <columns>
                 <TableColumn fx:id="tdId" prefWidth="139.0" text="Stt" />
                 <TableColumn fx:id="tdName" prefWidth="238.0" text="Tên sản phẩm" />
@@ -17,12 +17,12 @@
 
             </columns>
         </TableView>
-        <Button layoutX="603.0" layoutY="151.0" mnemonicParsing="false" onAction="#goToBill" text="Click Buy" />
-      <Text fill="#c93232" layoutX="277.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm">
+        <Button layoutX="603.0" layoutY="151.0" mnemonicParsing="false" onAction="#goToBill" style="-fx-background-color: honeydew;" text="Click Buy" />
+      <Text fill="#1fa649" layoutX="277.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm">
          <font>
             <Font size="27.0" />
          </font>
       </Text>
-      <Button layoutX="31.0" layoutY="27.0" mnemonicParsing="false" text="&lt;&lt;Back" />
+      <Button onAction="#goHome" layoutX="31.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: honeydew;" text="&lt;&lt;Back" />
     </children>
 </AnchorPane>

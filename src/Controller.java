@@ -1,3 +1,4 @@
+import autoCB.AutoCompleteComboBoxListener;
 import dao.impls.BillsRepository;
 import dao.impls.ProductsRepository;
 import entities.Bill;
@@ -17,6 +18,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.util.StringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
 import java.net.URL;
@@ -68,6 +70,27 @@ public class Controller implements Initializable {
         productsList.setAll(rp.all());
 
         cboSelectNameProduct.setItems(productsList);
+        new AutoCompleteComboBoxListener<>(cboSelectNameProduct);
+        cboSelectNameProduct.setConverter(new StringConverter<Products>() {
+
+            @Override
+            public String toString(Products object) {
+                if (object == null) return null;
+                return object.toString();
+            }
+
+            @Override
+            public Products fromString(String string) {
+                Products employee = new Products();
+                for(Products emp : cboSelectNameProduct.getItems()){
+                    if(emp.getName().equals(string)){
+                        employee = emp;
+                        break;
+                    }
+                }
+                return employee;
+            }
+        });
 
         tdId.setCellFactory(col -> {
             TableCell<Products, String> cell = new TableCell<>();
@@ -164,7 +187,7 @@ public class Controller implements Initializable {
             boolean res = billsRepository.uploadDetail(bill, new ArrayList<>(pr));
             if (res) {
                 Parent listBook = FXMLLoader.load(getClass().getResource("billDetails/billDetails.fxml"));
-                rootStage.setTitle("History");
+                rootStage.setTitle("Bill");
                 rootStage.setScene(new Scene(listBook, 800, 600));
             }
         }catch (Exception err){}
@@ -179,9 +202,9 @@ public class Controller implements Initializable {
     }
 
     public void handleChangeHistory(ActionEvent actionEvent) throws Exception {
-        Parent history = FXMLLoader.load(getClass().getResource("./billsHistory/billsHistory.fxml"));
-        rootStage.setTitle("History");
-        rootStage.setScene(new DefaultScene(history));
+        Parent root = FXMLLoader.load(getClass().getResource("./billsHistory/billsHistory.fxml"));
+        rootStage.setTitle("Bill");
+        rootStage.setScene(new Scene(root,800,600));
     }
 
     public void choose(ActionEvent actionEvent) throws NullPointerException {

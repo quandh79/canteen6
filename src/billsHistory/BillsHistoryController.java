@@ -54,4 +54,9 @@ public class BillsHistoryController implements Initializable {
     }
 
 
+    public void goHome(ActionEvent actionEvent)throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../home/homec.fxml"));
+        rootStage.setTitle("Home");
+        rootStage.setScene(new Scene(root,800,600));
+    }
 }

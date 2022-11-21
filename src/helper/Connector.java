@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Connector {
-    public final static String connectionString = "jdbc:mysql://localhost:3306/canteen1?allowMultiQueries=true";
+    public final static String connectionString = "jdbc:mysql://localhost:3306/canteen?allowMultiQueries=true";
     public final static String user = "root";
     public final static String pwd = "";// neu la xampp: "" , mamp: "root"
     private static Connector instance;

@@ -43,4 +43,10 @@ public class ProductController implements Initializable {
         ls.addAll(pr.all());
         tbProduct.setItems(ls);
     }
+
+    public void goHome(ActionEvent actionEvent)throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../home/homec.fxml"));
+        rootStage.setTitle("Hóa đơn");
+        rootStage.setScene(new Scene(root,800,600));
+    }
 }
